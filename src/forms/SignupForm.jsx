@@ -39,7 +39,10 @@ function SignupForm() {
     }
 
     try {
-      const response = await fetch("/api/register", {
+      // const response = await fetch("/api/register", {
+      const API = import.meta.env.VITE_API_BASE_URL;
+
+      const response = await fetch(`${API}/api/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),
