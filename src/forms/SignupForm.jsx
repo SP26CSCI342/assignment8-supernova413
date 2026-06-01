@@ -39,7 +39,8 @@ function SignupForm() {
     }
 
     try {
-      const response = await fetch("/api/register", {
+      const baseUrl = import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+      const response = await fetch(`${baseUrl}/api/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),
