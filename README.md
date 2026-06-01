@@ -1,2 +1,17 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/jYpz8rDY)
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=24044760&assignment_repo_type=AssignmentRepo)
+## Live URLs
+
+- **Client:** https://assignment8-supernova413.vercel.app
+- **Server:** https://platescout-lily.onrender.com
+- **Server health check:** https://platescout-lily.onrender.com/api/health
+
+## Local setup
+
+1. Clone the repo
+2. Copy `server/.env.example` to `server/.env` and fill in `MONGO_URI` + `JWT_SECRET`
+3. From the root: `npm install` (client) and `cd server && npm install` (server)
+4. Two terminals: `npm run dev` (root, client) + `npm run dev` (server)
+5. Open http://localhost:5173
+
+## What I learned during deployment
+
+In this project I learnt a way to deploy a website that uses a database by using Vercel and Render. I think it's cool that although there's quite a few steps to do so, you are able to do it for free and fairly quickly if you don't care about the website url extension. The part of the project I spent the most time debugging was step E. After completing it I tried to verify this part "Register a new user → success → /profile renders → user appears in Atlas with $2a$10$ hash" but got a network error. I spent ages trying to figure out the issue before realizing that the next step "6. Vite environment variable usage" fixed that. If I was to do it again, I'd read further in the instructions if I got stuck.
